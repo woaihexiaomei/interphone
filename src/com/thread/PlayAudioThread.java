@@ -3,6 +3,8 @@ package com.thread;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.ipmsg.util.Contants;
+
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
@@ -12,7 +14,6 @@ public class PlayAudioThread extends Thread{
 
 	InputStream is;	
 	
-	boolean isStopTalk = false;
 	
 	public PlayAudioThread(InputStream is) {
 		// TODO Auto-generated constructor stub
@@ -46,7 +47,7 @@ public class PlayAudioThread extends Thread{
 	            byte[] audio = new byte[160];// ÒôÆµ¶ÁÈ¡»º´æ  
 	            int length = 0;  
 	  
-	            while (!isStopTalk) {  
+	            while (!Contants.isPlaying) {  
 	                length = is.read(audio);// ´ÓÍøÂç¶ÁÈ¡ÒôÆµÊý¾Ý  
 	                byte[] temp = audio.clone();  
 	                if (length > 0 && length % 2 == 0) {  

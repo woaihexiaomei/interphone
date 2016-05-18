@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 import com.ipmsg.model.User;
+import com.ipmsg.util.Contants;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -19,7 +20,6 @@ public class SendAudioThread extends Thread{
 	
 	AudioRecord recorder;
 	
-	boolean isStopTalk = false;
 	
 	public SendAudioThread(OutputStream oos) {
 		// TODO Auto-generated constructor stub
@@ -49,7 +49,7 @@ public class SendAudioThread extends Thread{
 
         int length = 0;  
 
-        while (!isStopTalk) {  
+        while (!Contants.isPlaying) {  
             length = recorder.read(readBuffer, 0, 640);// 从mic读取音频数据  
             if (length > 0 && length % 2 == 0) {  
                 oos.write(readBuffer, 0, length);// 写入到输出流，把音频数据通过网络发送给对方  

@@ -189,6 +189,7 @@ public class MainActivity extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 		unregister();
+		Contants.isPlaying = false;
 
 	};
 

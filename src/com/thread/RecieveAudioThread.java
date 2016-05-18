@@ -6,13 +6,14 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import com.ipmsg.util.Contants;
+
 public class RecieveAudioThread extends Thread {
 
 	ServerSocket serverSocket = null;
 
 	Socket acceptSocket;
 
-	boolean isRunning = true;
 
 	@Override
 	public void run() {
@@ -26,7 +27,7 @@ public class RecieveAudioThread extends Thread {
 			e2.printStackTrace();
 		}
 
-		while (isRunning) {
+		while (!Contants.isPlaying) {
 
 			try {
 
