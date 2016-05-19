@@ -27,7 +27,7 @@ public class RecieveAudioThread extends Thread {
 			e2.printStackTrace();
 		}
 
-		while (!Contants.isPlaying) {
+		while (Contants.isPlaying) {
 
 			try {
 

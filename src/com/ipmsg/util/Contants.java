@@ -6,4 +6,6 @@ public class Contants {
 	
 	public static boolean isPlaying = true;
 	
+	public static Speex speex;
+	
 }

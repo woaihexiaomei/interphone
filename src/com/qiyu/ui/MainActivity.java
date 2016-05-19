@@ -9,6 +9,7 @@ import com.ipmsg.model.User;
 import com.ipmsg.service.IPMsgService;
 import com.ipmsg.util.Contants;
 import com.ipmsg.util.IntentConfig;
+import com.ipmsg.util.Speex;
 import com.qiyu.interphone.R;
 import com.qiyu.ui.adapter.UserAdapter;
 import com.thread.AudioSendAndRecieveThread;
@@ -50,6 +51,8 @@ public class MainActivity extends Activity {
 
 		sInstance = this;
 
+		Contants.speex = new Speex();
+		Contants.speex.init();
 		register();
 
 		btn1 = (Button) findViewById(R.id.button1);

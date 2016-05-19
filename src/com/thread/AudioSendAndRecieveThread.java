@@ -7,6 +7,7 @@ import java.net.Socket;
 import com.ipmsg.model.User;
 
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.animation.ScaleAnimation;
 
 public class AudioSendAndRecieveThread extends Thread{
@@ -60,6 +61,14 @@ public class AudioSendAndRecieveThread extends Thread{
 	
 	}catch(Exception ex){
 		ex.printStackTrace();
+		Log.e("innog", "ณ๖ดํมห");
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

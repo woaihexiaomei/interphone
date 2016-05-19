@@ -10,7 +10,7 @@ public class Speex {
      */    
     private static final int DEFAULT_COMPRESSION = 8;     
         
-    Speex() {    
+    public Speex() {    
     }    
     
     public void init() {    
